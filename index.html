@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Pendaftaran Komunitas Teknologi</title>
+
+    <!-- CSS Internal: Mengatur tampilan halaman -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -13,6 +15,7 @@
             color: #222;
         }
 
+        /* Judul halaman */
         h1 {
             text-align: center;
             color: white;
@@ -21,6 +24,7 @@
             backdrop-filter: blur(5px);
         }
 
+        /* Gaya untuk form */
         form {
             max-width: 650px;
             background-color: #ffffff;
@@ -30,6 +34,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
+        /* Gaya untuk fieldset dan legend */
         fieldset {
             border: 2px solid #00b4d8;
             border-radius: 10px;
@@ -43,39 +48,22 @@
             font-size: 1.1em;
         }
 
+        /* Label dan input */
         label {
             display: block;
             margin-top: 12px;
             font-weight: 500;
         }
 
-        input, select {
+        input {
             width: 100%;
             padding: 10px;
             margin-top: 6px;
             border: 1px solid #ccc;
             border-radius: 6px;
-            font-size: 0.95em;
-            transition: 0.2s;
         }
 
-        input:focus {
-            border-color: #00b4d8;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 180, 216, 0.3);
-        }
-
-        .gender, .minat {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 5px;
-        }
-
-        .buttons {
-            text-align: center;
-        }
-
+        /* Tombol submit dan reset */
         input[type="submit"], input[type="reset"] {
             background-color: #00b4d8;
             color: white;
@@ -85,7 +73,6 @@
             cursor: pointer;
             margin: 10px 5px;
             font-weight: bold;
-            transition: all 0.3s ease;
         }
 
         input[type="submit"]:hover {
@@ -95,38 +82,41 @@
         input[type="reset"]:hover {
             background-color: #ef233c;
         }
-
-        footer {
-            text-align: center;
-            color: #f8f9fa;
-            margin-top: 40px;
-            padding-bottom: 20px;
-            font-size: 0.9em;
-        }
     </style>
 </head>
 <body>
+
+    <!-- Judul halaman -->
     <h1>Formulir Pendaftaran Komunitas Teknologi</h1>
     
+    <!-- Formulir utama -->
     <form action="submit.html" method="post" enctype="multipart/form-data" autocomplete="on">
+
+        <!-- Bagian Data Pribadi -->
         <fieldset>
             <legend>Data Pribadi</legend>
 
+            <!-- Input nama lengkap -->
             <label for="nama">Nama Lengkap:</label>
             <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
 
+            <!-- Input email -->
             <label for="email">Alamat Email:</label>
             <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
 
+            <!-- Input password -->
             <label for="password">Kata Sandi:</label>
             <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" pattern=".{6,}" required>
 
+            <!-- Input usia -->
             <label for="usia">Usia:</label>
             <input type="number" id="usia" name="usia" min="15" max="60" placeholder="Masukkan usia" required>
 
+            <!-- Input tanggal lahir -->
             <label for="tgl">Tanggal Lahir:</label>
             <input type="date" id="tgl" name="tanggal_lahir" required>
 
+            <!-- Pilihan jenis kelamin -->
             <label>Jenis Kelamin:</label>
             <div class="gender">
                 <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
@@ -134,9 +124,11 @@
             </div>
         </fieldset>
 
+        <!-- Bagian Informasi Tambahan -->
         <fieldset>
             <legend>Informasi Tambahan</legend>
 
+            <!-- Checkbox minat -->
             <label>Minat:</label>
             <div class="minat">
                 <label><input type="checkbox" name="minat" value="AI"> AI</label>
@@ -145,22 +137,27 @@
                 <label><input type="checkbox" name="minat" value="Game"> Game</label>
             </div>
 
+            <!-- Nomor telepon -->
             <label for="telp">Nomor Telepon:</label>
             <input type="tel" id="telp" name="telp" placeholder="08xxxxxxxxxx" pattern="[0-9]{10,13}" required>
 
+            <!-- URL portofolio -->
             <label for="url">Link Portofolio:</label>
             <input type="url" id="url" name="url" placeholder="https://contoh.com">
 
+            <!-- Upload foto profil -->
             <label for="foto">Upload Foto Profil:</label>
             <input type="file" id="foto" name="foto" accept="image/*" required>
         </fieldset>
 
+        <!-- Tombol kirim dan reset -->
         <div class="buttons">
             <input type="reset" value="Reset">
             <input type="submit" value="Daftar Sekarang">
         </div>
     </form>
 
+    <!-- Footer halaman -->
     <footer>
         &copy; 2025 Komunitas Teknologi Indonesia
     </footer>
