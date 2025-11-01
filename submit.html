@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran Berhasil</title>
+
+    <!-- CSS Internal: mengatur tampilan halaman konfirmasi -->
     <style>
+        /* Gaya umum untuk seluruh halaman */
         body {
             background: linear-gradient(135deg, #0077b6, #00b4d8);
             color: white;
             font-family: 'Poppins', sans-serif;
             text-align: center;
             padding-top: 120px;
+            margin: 0;
         }
 
+        /* Kotak utama yang menampilkan pesan konfirmasi */
         .container {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -22,15 +27,18 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
+        /* Judul utama */
         h1 {
             margin-bottom: 15px;
         }
 
+        /* Paragraf penjelasan */
         p {
             font-size: 1.1em;
             margin-bottom: 25px;
         }
 
+        /* Tombol kembali ke halaman utama */
         a {
             display: inline-block;
             text-decoration: none;
@@ -42,15 +50,23 @@
             transition: 0.3s;
         }
 
+        /* Efek hover ketika mouse diarahkan ke tombol */
         a:hover {
             background-color: #caf0f8;
         }
     </style>
 </head>
 <body>
+    <!-- Bagian utama halaman -->
     <div class="container">
+
+        <!-- Judul pesan sukses -->
         <h1>Terima Kasih Telah Mendaftar!</h1>
+
+        <!-- Paragraf keterangan setelah formulir dikirim -->
         <p>Data Anda telah berhasil dikirim ke Komunitas Teknologi Indonesia.</p>
+
+        <!-- Tombol untuk kembali ke halaman form (index.html) -->
         <a href="index.html">Kembali ke Formulir</a>
     </div>
 </body>
